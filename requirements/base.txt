@@ -1,0 +1,109 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Lahore Fashion Textile ERP — Base Requirements (pinned versions)
+# Python 3.12 | Django 5.x
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Core Django ──────────────────────────────────────────────────────────────
+Django==5.1.4
+djangorestframework==3.15.2
+django-cors-headers==4.6.0
+django-filter==24.3
+drf-spectacular==0.28.0
+drf-nested-routers==0.94.1
+
+# ── ASGI / Realtime ──────────────────────────────────────────────────────────
+channels==4.1.0
+channels-redis==4.2.1
+uvicorn[standard]==0.32.1
+gunicorn==23.0.0
+whitenoise==6.8.2
+
+# ── Database ─────────────────────────────────────────────────────────────────
+psycopg[binary]>=3.2.3
+django-simple-history==3.7.0
+django-auditlog==3.0.0
+django-model-utils==5.0.0
+django-treebeard==4.7.1
+django-mptt==0.16.0
+
+# ── Auth & Security ───────────────────────────────────────────────────────────
+djangorestframework-simplejwt==5.3.1
+django-allauth[mfa]==65.3.0
+pyotp==2.9.0
+django-axes==7.0.1
+argon2-cffi==23.1.0
+
+# ── RBAC ─────────────────────────────────────────────────────────────────────
+django-guardian==2.4.0
+
+# ── Celery ───────────────────────────────────────────────────────────────────
+celery==5.4.0
+celery[redis]==5.4.0
+django-celery-beat==2.7.0
+django-celery-results==2.5.1
+flower==2.0.1
+kombu==5.4.2
+
+# ── Cache / Redis ─────────────────────────────────────────────────────────────
+django-redis==5.4.0
+redis==5.2.1
+
+# ── Money / Decimal ───────────────────────────────────────────────────────────
+# NEVER use float for money or quantities
+django-money==3.5.3
+py-moneyed==3.0
+
+# ── QR / Barcode ─────────────────────────────────────────────────────────────
+qrcode[pil]==8.0
+python-barcode==0.15.1
+segno==1.6.6
+opencv-python-headless==4.10.0.84
+pyzbar==0.1.9
+
+# ── PDF / Reporting ───────────────────────────────────────────────────────────
+weasyprint==62.3
+openpyxl==3.1.5
+xlsxwriter==3.2.0
+pandas==2.2.3
+reportlab==4.2.5
+
+# ── File Storage (S3/MinIO) ───────────────────────────────────────────────────
+django-storages[s3]==1.14.4
+Pillow==11.0.0
+python-magic==0.4.27
+boto3==1.35.78
+
+# ── Notifications ─────────────────────────────────────────────────────────────
+httpx==0.28.1
+django-anymail[mailgun]==12.0
+
+# ── Import / Export ───────────────────────────────────────────────────────────
+django-import-export==4.3.1
+
+# ── Ops / Monitoring ─────────────────────────────────────────────────────────
+sentry-sdk[django]==2.19.2
+structlog==24.4.0
+django-prometheus==2.3.1
+
+# ── Timezone ─────────────────────────────────────────────────────────────────
+pytz==2024.2
+
+# ── Rate Limiting ─────────────────────────────────────────────────────────────
+django-ratelimit==4.1.0
+
+# ── i18n / Utilities ─────────────────────────────────────────────────────────
+django-environ==0.11.2
+python-decouple==3.8
+phonenumbers==8.13.50
+python-slugify==8.0.4
+
+# ── FastAPI (realtime service) ────────────────────────────────────────────────
+fastapi==0.115.6
+pydantic==2.10.3
+pydantic-settings==2.6.1
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.20
+websockets==14.1
